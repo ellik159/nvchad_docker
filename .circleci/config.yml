@@ -13,8 +13,8 @@ jobs:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               echo $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USERNAME --password-stdin
-              docker build -t ellik159/mylunar-config:latest .
-              docker push ellik159/mylunar-config:latest
+              docker build -t ellik159/nvchad:latest .
+              docker push ellik159/nvchad:latest
             else
               echo "Not on develop branch, skipping Docker build and push"
             fi
